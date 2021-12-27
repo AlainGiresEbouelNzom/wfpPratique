@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfApp1.Models;
 
 namespace WpfApp1
 {
@@ -23,6 +24,26 @@ namespace WpfApp1
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void btnAjouter_Click(object sender, RoutedEventArgs e)
+        {
+            List<Etudiant> EtudiantList = new List<Etudiant>();
+
+            Etudiant etudiant = new Etudiant("Gires Ebouel");
+
+            EtudiantList.Add(etudiant);
+            dgEtudiant.ItemsSource = EtudiantList;
+        }
+
+        private void BtnEditerClick(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
